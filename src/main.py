@@ -91,16 +91,16 @@ class App(tk.Tk):
             self.prompt_new_game()
 
     def prompt_new_game(self):
-        new_game_button = tk.Button(self, text="New Game?", command=self.restart_game)
-        new_game_button.pack(pady=10)
+        self.new_game_button = tk.Button(self, text="New Game?", command=self.restart_game)
+        self.new_game_button.pack(pady=10)
         self.guess_button.pack_forget()
         self.entry.pack_forget()
 
-        def self.restart_game():
-            new_game_button.destroy()
-            self.guess_button.pack(pady=10)
-            self.entry.pack()
-            self.new_game()
+    def restart_game(self):
+        self.new_game_button.destroy()
+        self.guess_button.pack(pady=10)
+        self.entry.pack()
+        self.new_game()
 
 if __name__ == "__main__":
     app = App()
