@@ -1,0 +1,10 @@
+hello
+world
+python
+developer
+computer
+programming
+language
+gemini
+guess
+word
